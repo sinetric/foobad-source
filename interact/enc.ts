@@ -13,7 +13,7 @@ export const encrypt = (data, hwid, token) => {
         if (token) key += token;
 
         return {
-            error: false,
+            error: true,
             data: aes256.encrypt(key, data)
         }
     } catch {
